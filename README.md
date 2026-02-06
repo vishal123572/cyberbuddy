@@ -41,33 +41,6 @@ Whether you're starting out or brushing up on fundamentals, CyberBuddy acts like
 - **AI Logic:** Prompt-based explanation system  
 - **Version Control:** Git & GitHub  
 
----
-
-## 📸 Screenshots
-
-> Screenshots coming soon  
-*(Terminal UI, Lab Interface, AI Explanation Panel)*
-
----
-
-## 🗂️ Project Structure
-
-cyberbuddy/
-│── frontend/
-│ ├── index.html
-│ ├── style.css
-│ └── app.js
-│
-│── backend/
-│ ├── main.py
-│ └── labs/
-│
-│── labs/
-│ ├── recon.json
-│ ├── logs.json
-│
-│── README.md
-│── LICENSE
 
 ---
 
@@ -77,28 +50,6 @@ cyberbuddy/
 - 🔑 **Password & Hashing Lab** – Basics of credential security  
 - 📜 **Log Analysis Lab** – Detect suspicious login attempts  
 - 🌐 **Network Basics Lab** – Identify common attack patterns  
-
----
-
-## 🛣️ Roadmap
-
-### ✅ Phase 1 (Current)
-- Project setup
-- README & repo structure
-- Basic frontend layout
-
-### 🔜 Phase 2
-- Terminal simulator
-- First interactive lab
-- AI explanation logic
-
-### 🚀 Phase 3
-- User authentication
-- Difficulty levels
-- More labs & challenges
-- Deployment
-
----
 
 ## 🤝 Contributions
 
