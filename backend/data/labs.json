@@ -1,0 +1,192 @@
+{
+  "labs": [
+    {
+      "id": "recon-basics",
+      "title": "Reconnaissance Basics",
+      "icon": "🔍",
+      "difficulty": "Beginner",
+      "summary": "Understand why scanning, open ports, and service discovery matter.",
+      "objectives": [
+        "Understand reconnaissance",
+        "Run a simulated port scan",
+        "Interpret open ports",
+        "Collect simulated service information"
+      ],
+      "scenario": "You are investigating a simulated host at 10.10.10.5. No real network traffic is sent.",
+      "starting_message": "Try: help, hint, mission, scan 10.10.10.5, inspect 80, banner 80, explain, validate",
+      "commands": [
+        "help",
+        "hint",
+        "mission",
+        "scan 10.10.10.5",
+        "inspect 80",
+        "banner 80",
+        "whois 10.10.10.5",
+        "dns 10.10.10.5",
+        "explain",
+        "validate"
+      ],
+      "required_commands": [
+        "scan 10.10.10.5",
+        "inspect 80",
+        "banner 80",
+        "explain"
+      ],
+      "hints": [
+        "Run scan 10.10.10.5 to discover open ports.",
+        "Use inspect 80 to learn what service may be exposed.",
+        "Use banner 80 to collect simulated service information.",
+        "Run explain to receive the defender lesson."
+      ],
+      "why_it_matters": "Reconnaissance helps both attackers and defenders understand what is exposed. Defenders use this knowledge to reduce unnecessary exposure, harden services, and detect unauthorized scanning.",
+      "defender_tips": [
+        "Inventory exposed services regularly.",
+        "Close or restrict ports that are not needed.",
+        "Keep services patched and monitored.",
+        "Use firewall rules and network segmentation."
+      ],
+      "explanation": "Reconnaissance is the process of discovering what a system exposes to the network. In this simulated lab, scanning reveals open ports such as 22, 80, and 443. Open ports are not automatically bad, but each one increases the attack surface. Defenders should know why a port is open, what service is running, whether it is updated, and whether it should be protected, restricted, or closed."
+    },
+    {
+      "id": "password-hashing",
+      "title": "Password & Hashing Basics",
+      "icon": "🔑",
+      "difficulty": "Beginner",
+      "summary": "See why weak passwords and poor credential handling create risk.",
+      "objectives": [
+        "Understand password hashing",
+        "Compare weak and strong passwords",
+        "Learn credential protection basics",
+        "Understand breach exposure"
+      ],
+      "scenario": "You are testing credential handling in a simulated login system. No real credentials are used.",
+      "starting_message": "Try: help, hint, mission, hash password123, check password123, breach password123, explain, validate",
+      "commands": [
+        "help",
+        "hint",
+        "mission",
+        "hash password123",
+        "check password123",
+        "breach password123",
+        "policy",
+        "hash MyStr0ng!Passphrase",
+        "check MyStr0ng!Passphrase",
+        "explain",
+        "validate"
+      ],
+      "required_commands": [
+        "hash password123",
+        "check password123",
+        "breach password123",
+        "explain"
+      ],
+      "hints": [
+        "Run hash password123 to simulate hashing a weak password.",
+        "Run check password123 to evaluate password strength.",
+        "Run breach password123 to check simulated breach exposure.",
+        "Run explain to receive the defender lesson."
+      ],
+      "why_it_matters": "Credential attacks are one of the most common ways systems are compromised. Weak passwords, reused passwords, and insecure hashing can allow attackers to take over accounts.",
+      "defender_tips": [
+        "Never store passwords in plain text.",
+        "Use strong hashing algorithms and unique salts.",
+        "Encourage passphrases and password managers.",
+        "Add multi-factor authentication wherever possible."
+      ],
+      "explanation": "Passwords should never be stored in plain text. A strong credential system uses strong hashing, unique salts, rate limiting, and multi-factor authentication. Weak passwords are easy to guess or brute force. Good password security is not just about length; it also involves uniqueness, randomness, and protecting the authentication flow."
+    },
+    {
+      "id": "log-analysis",
+      "title": "Log Analysis Basics",
+      "icon": "📜",
+      "difficulty": "Beginner",
+      "summary": "Detect suspicious login behavior using simulated logs.",
+      "objectives": [
+        "Read authentication logs",
+        "Find repeated failed logins",
+        "Identify suspicious patterns",
+        "Summarize security events"
+      ],
+      "scenario": "You are reviewing simulated SSH login logs for a server. Your goal is to identify suspicious activity.",
+      "starting_message": "Try: help, hint, mission, cat /var/log/auth.log, grep Failed /var/log/auth.log, analyze, explain, validate",
+      "commands": [
+        "help",
+        "hint",
+        "mission",
+        "cat /var/log/auth.log",
+        "grep Failed /var/log/auth.log",
+        "analyze",
+        "timeline",
+        "report",
+        "explain",
+        "validate"
+      ],
+      "required_commands": [
+        "cat /var/log/auth.log",
+        "grep failed /var/log/auth.log",
+        "analyze",
+        "explain"
+      ],
+      "hints": [
+        "Run cat /var/log/auth.log to view the simulated authentication log.",
+        "Run grep Failed /var/log/auth.log to filter failed login attempts.",
+        "Run analyze to summarize suspicious behavior.",
+        "Run explain to receive the defender lesson."
+      ],
+      "why_it_matters": "Logs are one of the most important sources of truth in cybersecurity. They help defenders detect attacks, investigate incidents, and understand what happened after a security event.",
+      "defender_tips": [
+        "Centralize logs when possible.",
+        "Alert on repeated failed login attempts.",
+        "Investigate successful logins after failures.",
+        "Use MFA, rate limiting, and lockout policies."
+      ],
+      "explanation": "Log analysis helps defenders detect suspicious behavior. In this lab, multiple failed password attempts from the same address followed by a successful login may indicate brute-force or credential-stuffing behavior. Defenders can respond with alerts, account lockout policies, rate limiting, IP restrictions, and multi-factor authentication."
+    },
+    {
+      "id": "network-basics",
+      "title": "Network Basics",
+      "icon": "🌐",
+      "difficulty": "Beginner",
+      "summary": "Identify unusual connections and common attack patterns.",
+      "objectives": [
+        "Understand network connections",
+        "Inspect suspicious ports",
+        "Recognize abnormal behavior",
+        "Simulate defensive response"
+      ],
+      "scenario": "A simulated internal workstation may have an unusual outbound connection. Investigate safely.",
+      "starting_message": "Try: help, hint, mission, netstat -an, inspect 4444, trace 198.51.100.10, explain, validate",
+      "commands": [
+        "help",
+        "hint",
+        "mission",
+        "netstat -an",
+        "inspect 4444",
+        "trace 198.51.100.10",
+        "block 198.51.100.10",
+        "explain",
+        "validate"
+      ],
+      "required_commands": [
+        "netstat -an",
+        "inspect 4444",
+        "trace 198.51.100.10",
+        "explain"
+      ],
+      "hints": [
+        "Run netstat -an to view simulated network connections.",
+        "Inspect the suspicious port with inspect 4444.",
+        "Trace the suspicious destination with trace 198.51.100.10.",
+        "Run explain to receive the defender lesson."
+      ],
+      "why_it_matters": "Network monitoring helps defenders understand what systems are communicating with. Suspicious outbound connections can indicate malware, unauthorized remote access, or data exfiltration.",
+      "defender_tips": [
+        "Monitor unusual outbound connections.",
+        "Investigate unexpected ports and destinations.",
+        "Use firewall rules and egress filtering.",
+        "Verify processes before taking disruptive action."
+      ],
+      "explanation": "Network monitoring helps defenders understand what systems are communicating with. A suspicious outbound connection, especially to an uncommon port, may indicate malware, a reverse shell, or unauthorized remote access. In real environments, defenders investigate the process, destination address, port, timing, and whether the connection is expected."
+    }
+  ]
+}

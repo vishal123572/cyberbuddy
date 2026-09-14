@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+
+# SQLite Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Node / Frontend build tools (if added in future)
+node_modules/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE Files
+.vscode/
+.idea/
